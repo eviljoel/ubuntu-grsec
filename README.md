@@ -60,8 +60,7 @@ will later use to verify the Grsecurity and Linux kernel downloads.
 ```
 mkdir grsec
 cd grsec/
-wget https://grsecurity.net/spender-gpg-key.asc
-gpg --import spender-gpg-key.asc
+gpg --keyserver pool.sks-keyservers.net --recv-key DE9452CE46F42094907F108B44D1C0F82525FE49
 gpg --keyserver pool.sks-keyservers.net --recv-key 647F28654894E3BD457199BE38DBBDC86092693E
 ```
 
