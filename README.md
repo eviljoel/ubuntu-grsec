@@ -108,10 +108,9 @@ After moving the files from the online server to the offline server, you
 should have the following in your *grsec* directory.
 
 ```
-grsecurity-3.0-3.2.61-201407232156.patch	    spender-gpg-key.asc
+grsecurity-3.0-3.2.61-201407232156.patch	    linux-3.2.61.tar.xz
 grsecurity-3.0-3.2.61-201407232156.patch.sig	ubuntu-package/
 linux-3.2.61.tar.sign				            ubuntu-precise/
-linux-3.2.61.tar.xz
 ```
 
 ### Gather the required files for the Ubuntu kernel overlay
