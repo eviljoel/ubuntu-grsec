@@ -62,8 +62,18 @@ mkdir grsec
 cd grsec/
 wget https://grsecurity.net/spender-gpg-key.asc
 gpg --import spender-gpg-key.asc
-gpg --keyserver pool.sks-keyservers.net --recv-key 647F28654894E3BD457199BE38DBBDC86092693E
+gpg --keyserver pool.sks-keyservers.net --recv-key 6092693E
 ```
+
+Now verify the correct keys received are authentic.
+
+```
+gpg --with-fingerprint spender-gpg-key.asc
+gpg --fingerprint 6092693E
+```
+
+Bradley Spengler should have a fingerprint of "DE94 52CE 46F4 2094 907F  108B 44D1 C0F8 2525 FE49" 
+and Greg Kroah-Hartman should have a fingerprint of "647F 2865 4894 E3BD 4571  99BE 38DB BDC8 6092 693E".
 
 At this point, you should disconnect this server from the Internet and
 treat it as an offline (air-gapped) server.
