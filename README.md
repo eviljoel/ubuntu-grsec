@@ -60,7 +60,8 @@ will later use to verify the Grsecurity and Linux kernel downloads.
 ```
 mkdir grsec
 cd grsec/
-gpg --keyserver pool.sks-keyservers.net --recv-key DE9452CE46F42094907F108B44D1C0F82525FE49
+wget https://grsecurity.net/spender-gpg-key.asc
+gpg --import spender-gpg-key.asc
 gpg --keyserver pool.sks-keyservers.net --recv-key 647F28654894E3BD457199BE38DBBDC86092693E
 ```
 
@@ -108,9 +109,10 @@ After moving the files from the online server to the offline server, you
 should have the following in your *grsec* directory.
 
 ```
-grsecurity-3.0-3.2.61-201407232156.patch	    linux-3.2.61.tar.xz
+grsecurity-3.0-3.2.61-201407232156.patch	    spender-gpg-key.asc
 grsecurity-3.0-3.2.61-201407232156.patch.sig	ubuntu-package/
 linux-3.2.61.tar.sign				            ubuntu-precise/
+linux-3.2.61.tar.xz
 ```
 
 ### Gather the required files for the Ubuntu kernel overlay
