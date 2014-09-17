@@ -65,7 +65,7 @@ gpg --import spender-gpg-key.asc
 gpg --keyserver pool.sks-keyservers.net --recv-key 6092693E
 ```
 
-Now verify the correct keys received are authentic.
+Now verify the keys received are authentic.
 
 ```
 gpg --with-fingerprint spender-gpg-key.asc
