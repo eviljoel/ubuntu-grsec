@@ -160,6 +160,19 @@ cd linux-3.2.61/
 patch -p1 < ../grsecurity-3.0-3.2.61-201407232156.patch
 ```
 
+### Copy Ubuntu's Kernel Configuration
+
+If you installed SecureDrop on an encrypted partition or are having problems 
+getting some of your required hardware to work, you will need to use Ubuntu's
+kernel configuration as a basis for your Grsecurity kernel. Ubuntu's kernel
+configuration can be found in the */boot* directory. Copy it to your kernel
+build directory with the following commands. 
+
+```
+sudo cp /boot/config-`uname -r` .config
+sudo chown `whoami` .config
+```
+
 ### Configure Grsecurity
 
 Configure Grsecurity with the following command.
